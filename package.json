@@ -14,16 +14,17 @@
     "prettier:fix": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "prettier:check:json": "prettier --check \"*.json\"",
     "prettier:fix:json": "prettier --write \"*.json\"",
-    "stylelint:check": "stylelint \"src/**/*.css\"",
-    "stylelint:fix": "stylelint --fix \"src/**/*.css\"",
-    "eslint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\""
+    "stylelint:check": "stylelint \"src/**/*.scss\" --custom-syntax postcss-scss",
+    "stylelint:fix": "stylelint --fix \"src/**/*.scss\" --custom-syntax postcss-scss",
+    "eslint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
+    "eslint:check": "eslint --ext \"src/**/*.{js,jsx,ts,tsx}\""
   },
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2",
-    "sass": "^1.52.1"
+    "sass": "^1.52.1",
+    "web-vitals": "^1.1.2"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.15.1",
@@ -45,6 +46,8 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.1.2",
+    "postcss": "^8.4.14",
+    "postcss-scss": "^4.0.4",
     "prettier": "^2.5.0",
     "stylelint": "^14.1.0",
     "stylelint-config-prettier": "^9.0.3",
